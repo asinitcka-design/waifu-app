@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>Your Waifu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Waifu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="top">
-    <h2>💖 Выбери вайфу</h2>
-</div>
+<div class="app">
 
-<div class="grid">
-
-<div class="card" onclick="selectGirl('Плюшка', 'https://i.imgur.com/8Km9tLL.jpg')">
-    <img src="https://i.imgur.com/8Km9tLL.jpg">
-    <div class="info">
-        <h3>Плюшка</h3>
-        <p>Не бросай меня одну...</p>
+    <!-- Header -->
+    <div class="header">
+        <h1>Your Waifu</h1>
+        <div class="coins">
+            💎 230 ❤️ 412
+        </div>
     </div>
-</div>
 
-<div class="card" onclick="selectGirl('Илина', 'https://i.imgur.com/JlUvsxa.jpg')">
-    <img src="https://i.imgur.com/JlUvsxa.jpg">
-    <div class="info">
-        <h3>Илина</h3>
-        <p>Сыграем?</p>
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active">♀ Девушки</button>
+        <button class="tab">♂ Парни</button>
     </div>
-</div>
 
-<div class="card" onclick="selectGirl('Николь', 'https://i.imgur.com/4AiXzf8.jpg')">
-    <img src="https://i.imgur.com/4AiXzf8.jpg">
-    <div class="info">
-        <h3>Николь</h3>
-        <p>Твоя бывшая</p>
-    </div>
-</div>
+    <!-- Cards -->
+    <div class="grid">
 
-<div class="card" onclick="selectGirl('Руби', 'https://i.imgur.com/QCNbOAo.jpg')">
-    <img src="https://i.imgur.com/QCNbOAo.jpg">
-    <div class="info">
-        <h3>Руби</h3>
-        <p>Like a Boss</p>
+        <div class="card">
+            <img src="https://i.imgur.com/6VBx3io.jpeg">
+            <div class="info">
+                <h3>Плюшка</h3>
+                <p>Не бросай меня...</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/8Km9tLL.jpeg">
+            <div class="info">
+                <h3>Илина</h3>
+                <p>Сыграем?</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/9GgYb1v.jpeg">
+            <div class="info">
+                <h3>Николь</h3>
+                <p>Твоя бывшая</p>
+            </div>
+        </div>
+
     </div>
-</div>
+
+    <!-- Chat -->
+    <div class="chat">
+        <div id="messages"></div>
+
+        <div class="input">
+            <input id="text" placeholder="Напиши ей..." />
+            <button onclick="send()">▶</button>
+        </div>
+    </div>
 
 </div>
 
 <script src="app.js"></script>
-
 </body>
 </html>
