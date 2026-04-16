@@ -2,82 +2,53 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
 <title>Your Waifu</title>
-
-<style>
-body {
-    background: #0b0b1a;
-    color: white;
-    font-family: Arial;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    padding: 20px;
-}
-
-.card {
-    background: #1c1c3a;
-    border-radius: 15px;
-    padding: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-img {
-    width: 100%;
-    border-radius: 10px;
-    height: 200px;
-    object-fit: cover;
-}
-
-h2 {
-    margin: 5px 0;
-}
-</style>
 </head>
 
 <body>
 
-<h1>💖 Выбери вайфу</h1>
+<div class="top">
+    <h2>💖 Выбери вайфу</h2>
+</div>
 
 <div class="grid">
 
-<div class="card" onclick="selectGirl('Алина')">
-    <img src="https://images.unsplash.com/photo-1608889175246-8c6e2d8c4d59">
-    <h2>Илина 😺</h2>
+<div class="card" onclick="selectGirl('Плюшка', 'https://i.imgur.com/8Km9tLL.jpg')">
+    <img src="https://i.imgur.com/8Km9tLL.jpg">
+    <div class="info">
+        <h3>Плюшка</h3>
+        <p>Не бросай меня одну...</p>
+    </div>
 </div>
 
-<div class="card" onclick="selectGirl('Плюшка')">
-    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-    <h2>Плюшка 💕</h2>
+<div class="card" onclick="selectGirl('Илина', 'https://i.imgur.com/JlUvsxa.jpg')">
+    <img src="https://i.imgur.com/JlUvsxa.jpg">
+    <div class="info">
+        <h3>Илина</h3>
+        <p>Сыграем?</p>
+    </div>
 </div>
 
-<div class="card" onclick="selectGirl('Николь')">
-    <img src="https://images.unsplash.com/photo-1610878180933-123728745d22">
-    <h2>Николь 🖤</h2>
+<div class="card" onclick="selectGirl('Николь', 'https://i.imgur.com/4AiXzf8.jpg')">
+    <img src="https://i.imgur.com/4AiXzf8.jpg">
+    <div class="info">
+        <h3>Николь</h3>
+        <p>Твоя бывшая</p>
+    </div>
 </div>
 
-<div class="card" onclick="selectGirl('Руби')">
-    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432">
-    <h2>Руби 🔥</h2>
+<div class="card" onclick="selectGirl('Руби', 'https://i.imgur.com/QCNbOAo.jpg')">
+    <img src="https://i.imgur.com/QCNbOAo.jpg">
+    <div class="info">
+        <h3>Руби</h3>
+        <p>Like a Boss</p>
+    </div>
 </div>
 
 </div>
 
-<script>
-function selectGirl(name) {
-    localStorage.setItem("waifu", name)
-    window.location.href = "chat.html"
-}
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
